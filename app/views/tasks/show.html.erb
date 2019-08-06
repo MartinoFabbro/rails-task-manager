@@ -1,0 +1,16 @@
+<% if @task.completed %>
+<h2><%= @task.title %> &#9989</h2>
+<h3><%= @task.details %></h3>
+<% else %>
+<h2><%= @task.title %> &#10062</h2>
+<h3><%= @task.details %></h3>
+<% end %>
+
+
+<%= link_to "Edit", edit_task_path %>
+
+<%= link_to "Destory", task_path, method: :delete, data: {confirm: "Are you sure?"}%>
+
+<%= link_to "go back", tasks_path %>
+
+
